@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Tienda</title>
+    <link rel="icon" href="../img/favicon.jpeg" type="image/favicon.png" />
+    <link rel="stylesheet" href="../css/producto.css" />
+    <script defer src="../js/detalle_producto.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="menu container">
+        <img class="logo" src="../img/logo.jpg" alt="logo" />
+      </div>
+    </header>
+    <main class="container">
+      <div>
+        <button
+          id="volver"
+          class="regresar"
+          onclick="regresarAlFormularioAnterior()"
+        >
+          ← Volver
+        </button>
+      </div>
+
+      <div class="producto" id="insert-producto">
+        <div class="info-1">...</div>
+      </div>
+
+      <div class="mas-informacion" id="mas-informacion">
+        <div class="info-1">...</div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-links container">
+        <div class="link">
+          <img src="../img/logo.jpg" alt="logo" />
+        </div>
+        <div class="link">
+          <h3>Atención al cliente</h3>
+          <li><p>0800 122 0338</p></li>
+          <li><p>0810 999 3728</p></li>
+          <li><p>LU-VI de 09:00 a 18:00SA de 9:00 a 13:00</p></li>
+        </div>
+        <div class="link">
+          <h3>Venta telefónica</h3>
+          <li><p>0810 333 8700</p></li>
+          <li><p>LU-VI de 8:00 a 20:00SA-DO-Feriados 9:00 a 21:00</p></li>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function regresarAlFormularioAnterior() {
+        window.history.back(); // Retrocede una página en el historial del navegador
+      }
+    </script>
+    <!-- <script defer src="./js/detalle_producto.js"></script> -->
+  </body>
+</html>

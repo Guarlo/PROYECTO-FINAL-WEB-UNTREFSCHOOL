@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 75em;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3.125em;
+    font-weight: 600;
+}
+
+h2 {
+    color: black;
+    font-size: 2.125em;
+    font-weight: 800;
+    margin-top: 1.25rem;
+}
+
+h3 {
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+h4 {
+    color: black;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+p{
+    color: black;
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin-bottom: 1.5625rem;
+}
+
+.logo {
+    text-align: left;
+    width: 200px;
+    margin-right: 80px;
+}
+
+.boton {
+    display: inline-block;
+    color:  white;
+    background-color: black;
+    padding: 1.25em;
+    border: none;
+    border-radius: 0.5em;
+}
+
+.boton:hover {
+    background-color: #F90400; 
+}
+
+.subtitulos-de-secciones {
+    text-align: left;
+    margin-top: 3em;
+    margin-bottom: 1em;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    position: relative;
+    background-color: black;
+    padding: 1.7em;
+}
+
+.menu {
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.regresar {
+	font-size: 16px;
+	margin-top: 2rem;
+}
+
+/* SERVICIOS */
+.servicios {
+    text-align: left;
+    background-color: #e4ebee;
+    padding-top: 2em;
+    padding-bottom: 20em;
+}
+
+
+/*  FORMULARIO */
+.nosotros-info {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-flow: row wrap;
+}
+
+.colorful-form {
+    width: 25em;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 1.25em;
+  }
+  
+  .form-label {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0.625em;
+    color: #333;
+    padding-top: 0.1em;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    padding-left: 0.3em;
+    border: solid 1px #5c727d42;
+    background-color: #fff;
+    color: #333;
+    border-radius: 5px;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  
+  textarea.form-input {
+    height: 6.25em;
+  }
+  
+  .form-button {
+    display: block;
+    width: 100%;
+    padding: 1.125em;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  
+  .form-button:hover {
+    background-color: #F90400;
+  }
+
+
+/* FOOTER */
+.footer {
+    padding: 3.125em 0;
+    background-color:black;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between; 
+    gap: 1.875em;
+}
+
+.link h3 {
+    color: white;
+    margin-bottom: 1.25em;
+}
+
+.link li p {
+    color: #e6e6e6;
+    font-size: 0.875em;
+    line-height: 40%;
+}
+
+.link img {
+    width: 180px;
+}
+
+
+@media screen and (max-width: 1260px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .servicios {
+        padding-left: 3em;
+    }
+
+    /* FOOTER */
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    
+    body {
+        font-size: 12px;
+    }
+}

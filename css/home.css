@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 75em;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3.125em;
+    font-weight: 600;
+}
+
+h2 {
+    color: black;
+    font-size: 2.125em;
+    font-weight: 800;
+    margin-top: 1.25rem;
+}
+
+h3 {
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+h4 {
+    color: black;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+p{
+    color: black;
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin-bottom: 1.5625rem;
+}
+
+.logo {
+    text-align: left;
+    width: 200px;
+    margin-right: 80px;
+}
+
+.subtitulos-de-secciones {
+    text-align: center;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    position: relative;
+    background-color: black;
+    padding: 1.5em;
+}
+
+.menu {
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.carrito-compra {
+    width: 30px;
+}
+
+/* .carrito-compra-cantidad {
+    width: 30px;
+} */
+
+.boton_carrito_cantidad {
+    color: white;
+    font-size: 16px;
+    background-image: url(../img/carrito-cantidad.png);
+    background-repeat: no-repeat;
+    height: 35px;
+    width: 35px;
+    background-size: 30px 30px;
+    background-position: center;
+    cursor: pointer;
+    margin-top: -2.9em;
+    margin-left: 1.7em;
+    padding-left: 0.5em;
+  }
+
+/* SERVICIOS */
+.servicios {
+    padding: 5em 0;
+    text-align: center;
+    background-color: #e4ebee;
+    padding-top: 8em;
+    padding-bottom: 10em;
+}
+
+.servicios h2 {
+    margin-bottom: 2em;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    column-gap: 1.25em;
+    row-gap: 1.25em;
+}
+
+.info-1 {
+    width: 23.75em;
+    padding: 2.5em;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: white;
+}
+
+.info-1:hover {
+    border-color: #F90400;
+    border-width: 1.5px;
+    border-style: solid;
+}
+
+.info-1 img {
+    width: 15rem;
+}
+
+.info-1 h3 {
+    margin-top: 0.9375em;
+    margin-bottom: 0.625em;
+}
+
+.info-1 p {
+    padding: 0.625em;
+}
+
+.producto__btn-cantidad {
+	background: #e0e0e0;
+	padding: 10px 15px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	font-weight: 700;
+	height: 40px;
+    margin-top: 1em;
+}
+
+.producto__cantidad {
+	height: 40px;
+	border: #e0e0e0 solid 1px;
+    border-radius: 5px;
+	text-align: center;
+	width: 50px;
+	font-size: 16px;
+	font-family: 'Rubik', sans-serif;
+}
+
+.producto__cantidad:focus {
+	outline: none;
+}
+
+.producto__btn-carrito {
+	height: 50px;
+	font-size: 14px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	border-radius: 5px;
+	color: black;
+	cursor: pointer;
+	border: none;
+	padding: 10px 10px;
+    margin-top: 1em;
+    background-color: #ebebeb;
+    border: #b8b8b8 solid 1px;
+}
+
+.producto__btn-carrito:hover {
+	color: white;
+    background: #F90400;
+}
+
+.mas-info {
+	height: 20px;
+	font-size: 14px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	border-radius: 3px;
+	color: black;
+	cursor: pointer;
+	border: none;
+	padding: 1px 4px;
+    margin-left: 20em;
+    background-color: white;
+    border: #b8b8b8 solid 1px;
+}
+
+.mas-info:hover {
+	color: white;
+    background: #F90400;
+}
+
+/* FOOTER */
+.footer {
+    padding: 3.125em 0;
+    background-color:black;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between; 
+    gap: 1.875em;
+}
+
+.link h3 {
+    color: white;
+    margin-bottom: 1.25em;
+}
+
+.link li p {
+    color: #e6e6e6;
+    font-size: 0.875em;
+    line-height: 40%;
+}
+
+.link img {
+    width: 180px;
+}
+
+@media screen and (max-width: 1060px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .mas-info {
+        margin-left: 18em;
+
+    }
+    
+
+    
+    
+    /* FOOTER */
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .socials {
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    
+    body {
+        font-size: 12px;
+    }
+}
