@@ -9,17 +9,13 @@ let inputCantidad = null;
 let jsonString = localStorage.getItem("carrito");
 if (jsonString !== null) {
   carritoDataStorage = JSON.parse(jsonString);
-  // console.log("string: ");
-  // console.log(jsonString);
-  // console.log("parse: ");
-  // console.log(carritoDataStorage);
 } else {
   jsonString = JSON.stringify(carritoDataStorage);
   localStorage.setItem("carrito", jsonString);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Obtén el código del producto de la URL
+// Obtén el código del producto de la URL
   const urlParams = new URLSearchParams(window.location.search);
   const productId = urlParams.get("id"); // Cambia "codigo" a "id" para que coincida con la URL
 
@@ -28,19 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const masDetalleProductoContainer =
     document.getElementById("mas-informacion"); // Usa querySelector para seleccionar la clase CSS
 
-  // detalleProductoContainer.innerHTML = detalleproductoHTML;
-
+  
   // Encuentra el producto correspondiente por su código
   productoActual = globalProductos.find((p) => p.codigo == parseInt(productId));
 
   if (productoActual) {
-    // Construye el HTML para mostrar los detalles del producto
-
-    // console.log(productoActual);
-    // console.log('>>>>>no puedo traer la imagen del producto<<<')
-    // console.log(producto.imagen)
-    // console.log(producto.imagen1)
-    // console.log(producto.imagen2)
     const detalleproductoHTML = `<div class="producto__thumbs">
     <img
       src="../${productoActual?.image2}"
@@ -180,8 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
     Agregar al carrito
     </button>
     `;
-    //console.log(detalleproductoHTML);
-
+  
     const masDetalleproductoHTML = `
     <div class="tab tab--active" id="caracteristicas">
     <h3 class="tab__titulo">Descripción</h3>
@@ -226,8 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
     `;
 
-    // Agrega el HTML generado al contenedor en detalleproducto.html
-    //const detalleProductoContainer = document.getElementById("insert-producto"); // Usa querySelector para seleccionar la clase CSS
+  // Agrega el HTML generado al contenedor.
     detalleProductoContainer.innerHTML = detalleproductoHTML;
     masDetalleProductoContainer.innerHTML = masDetalleproductoHTML;
 
@@ -250,9 +236,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //----------------------------------------------------------------------------
-
-//console.log(`producto ${productoActual}`);
-
 function fncIncrementarCantidad() {
   let cantidad = 0;
   let valDOM = inputCantidad.value;
@@ -262,16 +245,12 @@ function fncIncrementarCantidad() {
     //Actualiza el DOM
     valDOM = cantidad.toString();
     inputCantidad.value = valDOM;
-    //Actualiza el productoActual del carrito.
-    // productoActual.carritoCantidad = cantidad;
-    // productoActual.carritoTotalParcial =
-    //   cantidad * productoActual.precioUnitario;
   } else {
     alert("El máximo son 6 unidades");
   }
 
-  //console.log("inc");
 }
+
 function fncDisminuirCantidad() {
   let cantidad = 0;
   let valDOM = inputCantidad.value;
@@ -281,15 +260,10 @@ function fncDisminuirCantidad() {
     //Actualiza el DOM
     valDOM = cantidad.toString();
     inputCantidad.value = valDOM;
-    //Actualiza el productoActual del carrito.
-    // productoActual.carritoCantidad = cantidad;
-    // productoActual.carritoTotalParcial =
-    //   cantidad * productoActual.precioUnitario;
   } else {
     alert("El mínimo es 1 unidad");
     console.log("El mínimo es 1 unidad");
   }
-  //console.log("Dis");
 }
 
 function fncAgregarCarrito() {
