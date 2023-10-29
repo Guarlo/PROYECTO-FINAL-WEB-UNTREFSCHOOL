@@ -1,7 +1,6 @@
 <p align="center">
   <a href="https://www.guarlo.com.ar/pi2/tecnomax/">
     <img src="https://guarlo.com.ar/pi2/tecnomax/img/logo.jpg" alt="Tecnomax logo" 
-    width="200" height="200">
   </a>
 </p>
 
