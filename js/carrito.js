@@ -55,8 +55,9 @@ const cargarProductos = (prods) => {
   }
 };
 const carrito = JSON.parse(localStorage.getItem("carrito"));
-cargarProductos(carrito);
-
+if (carrito != null) {
+  cargarProductos(carrito);
+}
 tableBody.addEventListener("click", function (event) {
   if (event.target.tagName === "BUTTON") {
     const idTag = event.target.id;
@@ -66,7 +67,7 @@ tableBody.addEventListener("click", function (event) {
 
     if (listItemToRemove) {
       // Utiliza el método remove() para eliminar el elemento.
-      console.log(listItemToRemove.id);
+      //console.log(listItemToRemove.id);
       listItemToRemove.remove();
 
       // Quitar de la tabla array
@@ -97,3 +98,17 @@ function actualizatTotalCarrito() {
   });
   importeTotalCarrito.innerHTML = `${importeFormateado}`;
 }
+
+function fncPagar() {
+  if (carrito != null) {
+    if (carrito.length > 0) {
+      window.location.href = "medios_de_pago.html";
+    } else {
+      alert("No hay productos en el carrito!");
+    }
+  } else {
+    alert("No hay productos en el carrito!");
+  }
+}
+const btnMediosDePago = document.getElementById("btn-medios-de-pago");
+btnMediosDePago.addEventListener("click", fncPagar);
